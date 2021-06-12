@@ -1,0 +1,33 @@
+
+strong{
+    font-size: 50px;
+}
+
+p1{
+    padding: 10px 10px 10px 10px;
+}
+
+.space{
+    padding: 10px 10px 10px 10px;
+}
+
+.button1{
+    background-color: rgb(73, 73, 255);
+    padding: 10px 10px 10px 10px;
+    color: white;
+}
+.button4{
+    background-color: rgb(73, 73, 255);
+    padding: 10px 10px 10px 10px;
+    color: white;
+}
+.button3{
+    background-color: rgb(73, 73, 255);
+    padding: 10px 10px 10px 10px;
+    color: white;
+}
+
+h1{
+    font-size: 20px
+    
+}

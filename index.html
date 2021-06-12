@@ -1,0 +1,177 @@
+<!-- 
+    OLD CODE PLEASE IGNOREEEE
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css"/>
+    <ln><a href="style.css"></a></ln> //linking the css
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Quiz</title>
+    <h1>
+        <strong>Code Quiz~</strong>
+    </h1>
+    <p id="time">2:00</p>
+    
+    <hr size="auto" color="grey">
+    
+</head>
+<body>
+    
+    <div class="space">
+        <div class="page1">
+            <p1>You will be taking a short quiz</p1> <br>
+            <p1>This quiz will be timed</p1> <br>
+            <p1>When you get a question right you move on to the next question</p1> <br>
+            <p1> When you get a question wrong you lose some time</p1> <br>
+            <p1>How fast and correctly you complete the quiz will determine your score</p1><br><br>
+            <input id="btn1" type="button" value="start" class="button1" >
+        </div>
+
+        <div class="page2">
+            <h1>
+                <b>
+                    Question1:<br>
+                    Codeing is ____.<br>
+                </b> 
+            </h1>
+            <input id="btn2a" type="button" value="A. fun" class="button2a" onclick = "clrchange(1, '.button2a')"><br>
+            <input id="btn2b" type="button" value="B. ok" class="button2" onclick = "penalty('.button2')"><br>
+            <input id="btn2c" type="button" value="C. bad" class="button2" onclick = "penalty('.button2')"><br>
+            <input id="btn2d" type="button" value="D. hard" class="button2" onclick = "penalty('.button2')"><br>
+        </div>
+        
+        <div class="page3">
+            <h1>
+                <b>
+                    Question2:<br>
+                    What is a div?<br>
+                </b> 
+            </h1>
+            <input id="btn3a" type="button" value="A. Its a type of URL" class="button2" onclick = "penalty('.button2')"><br>
+            <input id="btn3b" type="button" value="B. Its an HTML Tag" class="button2a" onclick = "clrchange(1, '.button2a')"><br>
+            <input id="btn3c" type="button" value="C. Its short for derivative" class="button2" onclick = "penalty('.button2')"><br>
+            <input id="btn3d" type="button" value="D. Its a dividend ETF ticker symbol" class="button2" onclick = "penalty('.button2')"><br>
+        </div>
+
+        <div class="page4">
+            <h1>
+                <b>
+                    Question3:<br>
+                    What is the correct way to declare a var in JS? <br>
+                </b> 
+            </h1>
+            <input id="btn4a" type="button" value="A. declare var" class="button2" onclick = "penalty('.button2')" ><br>
+            <input id="btn4b" type="button" value="B. var number = 0;"  class="button2a" onclick = "penalty('.button2')"><br>
+            <input id="btn4c" type="button" value="C. pizza" class="button2" onclick ="clrchange(1, '.button2a')"><br>
+            <input id="btn4d" type="button" value="D. var number = 0:" class="button2" onclick = "penalty('.button2')" ><br>
+            <input id="btn4e" type="button" value="E. pizza again" class="button2" onclick = "penalty('.button2')" ><br>
+        </div>
+
+        <div class="page5">
+            <h1>
+                <b>
+                    Question4:<br>
+                    Complete the code:<br>
+                    for(var i = 0; 1 &lt i; ___){ *** }
+                </b> 
+            </h1>
+            <input id="btn5a" type="button" value="A. i++" class="button2a" onclick = "clrchange(1, '.button2a')"><br>
+            <input id="btn5b" type="button" value="B. var code = complete;" class="button2" onclick = "penalty('.button2')"><br>
+            <input id="btn5c" type="button" value="C. i--" class="button2" onclick = "penalty('.button2')"><br>
+            <input id="btn5d" type="button" value="D.                  " style = "background-image: url(Screenshot\ 2021-01-20\ 0131372.png)" class="button2" onclick = "penalty('.button2')" ><br>
+        </div>
+
+        <div class="page6">
+            Congradulations!!<br>
+            You finished the quiz!!<br>
+            Your score is: <br>
+            <input id="score" type="button" value="Score" class="button3"><br>
+        </div>
+        
+        <div class="page7">
+            <h1>
+                Scoreboard: <br>
+
+            </h1>
+            <ul id="people-list">
+              <li id="0"></li>
+            </ul>
+            <input placeholder="name" id="name" />
+            <input id="score" type="button" value="Save" class="button4"><br>
+        </div>
+
+        
+
+         
+
+        
+
+
+
+
+
+
+
+
+    </div>
+    <script src="./script.js"></script>
+    
+</body>
+</html> --> 
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Quiz Code</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="timer"></div>
+
+      <main id="quizContainer"></main>
+
+      <div id="alert-msg"></div>
+    </div>
+
+    <div class="startBtn-container">
+      <button id="start-btn">Start</button>
+    </div>
+
+    <!-- --------- Render-Last-User Container Code -------- -->
+    <div id="lastUser-Container" class="hide">
+      <h1 id="yourScore">Your Score</h1>
+      <input
+        typer="text"
+        name="initials"
+        class="initials"
+        placeholder="Type your initials here"
+      />
+
+      <div>
+        <div class="save-div"></div>
+        <button id="save" placeholder="save">Save</button>
+      </div>
+
+      <h2>Scores</h2>
+
+      <ul id="lastUserScore">
+        
+      </ul>
+
+      <div>
+        <button id="play-again">Play Again</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
